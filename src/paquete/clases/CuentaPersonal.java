@@ -60,7 +60,7 @@ public class CuentaPersonal extends Cuenta implements Gusto
     @Override
     public void MarcarGustos() 
     {
-        
+       //Revisar esta función post-prueba... 
         
         System.out.print("Ingrese sus gustos"
                 + "\n1. Juegos"
@@ -77,7 +77,9 @@ public class CuentaPersonal extends Cuenta implements Gusto
         boolean salir = false;
         int opcion;
         
-        StringBuffer sb = new StringBuffer("Ha escogido: ");
+        //StringBuffer sb = new StringBuffer("Ha escogido");
+        StringBuilder sb;                    
+        sb = new StringBuilder("Ha escogido: ");
  
         while (!salir) {
  

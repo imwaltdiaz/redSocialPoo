@@ -10,7 +10,8 @@ package paquete.clases;
  */
 public interface Gusto 
 {
-   
+    int VALOR=1;
+    
     
     void MarcarGustos();
     

@@ -71,8 +71,9 @@ public class CuentaKids extends Cuenta implements Gusto
                 + "\n2. Libros"
                 + "\n3. Cine");
         
-        for (int i=0;i<0;i++)
+        for (int i=0;i<gusto.length;i++)
         {
+            
             Scanner sc = new Scanner(System.in);
             
         }
