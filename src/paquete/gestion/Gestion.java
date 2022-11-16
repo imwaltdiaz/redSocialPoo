@@ -5,10 +5,17 @@
  */
 package paquete.gestion;
 
+import java.util.ArrayList;
+
+import paquete.clases.*;
+
 /**
  *
  * @author wadia
  */
 public class Gestion {
+    private Cuenta[] arregloCuentas;
+    private int contaCuenta;
+    private ArrayList<Publicacion> arregloPublis;
     
 }

@@ -4,10 +4,31 @@
  */
 package paquete.clases;
 
+import java.util.Scanner;
+
 /**
  *
  * @author gabrielcuray
  */
-public class CuentaEmpresarial {
-    
+public class CuentaEmpresarial extends Cuenta{
+  public String CrearPubli() {
+    String valid;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Desea ingresar una publicación. (Y)(N)");
+    valid = sc.next();
+
+    if (valid.equalsIgnoreCase("Y")) {
+      this.validPubli = true;
+    }
+
+    if (this.validPubli = true) {
+      System.out.println("Ingrese su publicación");
+      this.publicacion = sc.next();
+    }
+    return publicacion;
+  }
+
+  @Override
+  public void VerPubli() {    
+  }
 }

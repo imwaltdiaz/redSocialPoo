@@ -9,10 +9,6 @@ package paquete.clases;
  * @author gabrielcuray
  */
 public interface Gusto 
-{
-    int VALOR=1;
-    
-    
-    void MarcarGustos();
-    
+{    
+  void MarcarGustos();
 }

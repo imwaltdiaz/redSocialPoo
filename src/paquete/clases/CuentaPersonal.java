@@ -11,119 +11,100 @@ import java.util.Scanner;
  *
  * @author gabrielcuray
  */
-public class CuentaPersonal extends Cuenta implements Gusto
-{
-    private String Gusto;
+public class CuentaPersonal extends Cuenta implements Gusto {
+  private String Gustos;
 
-    
-    
-    
-    public String getGusto() {
-        return Gusto;
+  public String getGusto() {
+    return Gustos;
+  }
+
+  public void setGusto(String Gusto) {
+    this.Gustos = Gusto;
+  }
+
+  @Override
+  public String CrearPubli() {
+    String valid;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Desea ingresar una publicación. (Y)(N)");
+    valid = sc.next();
+
+    if (valid.equalsIgnoreCase("Y")) {
+      this.validPubli = true;
     }
 
-    public void setGusto(String Gusto) {
-        this.Gusto = Gusto;
+    if (this.validPubli = true) {
+      System.out.println("Ingrese su publicación");
+      this.publicacion = sc.next();
     }
-    
-    
-    
-    @Override
-    public void CrearPubli() 
-    {
-        String valid;
+    return publicacion;
+  }
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Desea ingresar una publicación. (Y)(N)");
-        valid = sc.next();
-        
-        if(valid.equalsIgnoreCase("Y"))
-        {
-            this.validPubli=true;
-        } 
-        
-        if (this.validPubli = true)
-        {
-          System.out.println("Ingrese su publicación");
-          this.publicacion = sc.next();
+  @Override
+  public void VerPubli() {
+    
+  }
+
+  @Override
+  public void MarcarGustos() {
+    // Revisar esta función post-prueba...
+
+    System.out.print("Ingrese sus gustos"
+        + "\n1. Juegos"
+        + "\n2. Libros"
+        + "\n3. Cine");
+
+    for (int i = 0; i < 0; i++) {
+      Scanner sc = new Scanner(System.in);
+
+    }
+
+    Scanner sc = new Scanner(System.in);
+    boolean salir = false;
+    int opcion;
+
+    // StringBuffer sb = new StringBuffer("Ha escogido");
+    StringBuilder sb;
+    sb = new StringBuilder("Ha escogido: ");
+
+    while (!salir) {
+
+      System.out.println("1. Juegos");
+      System.out.println("2. Libros");
+      System.out.println("3. Cine");
+      System.out.println("4. Salir");
+
+      try {
+
+        System.out.println("Escribe una de las opciones");
+        opcion = sc.nextInt();
+
+        switch (opcion) {
+          case 1:
+            System.out.println("Has seleccionado Juegos");
+            sb.append("\nJuegos");
+            break;
+          case 2:
+            System.out.println("Has seleccionado Libros");
+            sb.append("\nLibros");
+            break;
+          case 3:
+            System.out.println("Has seleccionado Cine");
+            sb.append("\nCine");
+            break;
+          case 4:
+            salir = true;
+            break;
+          default:
+            System.out.println("Solo números entre 1 y 4");
+
         }
-        
-       
+      } catch (InputMismatchException e) {
+        System.out.println("Debes insertar un número");
+        sc.next();
+      }
     }
+    System.out.println(sb.toString());
+  }
 
-    @Override
-    public void VerPubli() 
-    {
-    
-    }
-
-    @Override
-    public void MarcarGustos() 
-    {
-       //Revisar esta función post-prueba... 
-        
-        System.out.print("Ingrese sus gustos"
-                + "\n1. Juegos"
-                + "\n2. Libros"
-                + "\n3. Cine");
-        
-        for (int i=0;i<0;i++)
-        {
-            Scanner sc = new Scanner(System.in);
-            
-        }
-        
-        Scanner sc = new Scanner(System.in);
-        boolean salir = false;
-        int opcion;
-        
-        //StringBuffer sb = new StringBuffer("Ha escogido");
-        StringBuilder sb;                    
-        sb = new StringBuilder("Ha escogido: ");
- 
-        while (!salir) {
- 
-            System.out.println("1. Juegos");
-            System.out.println("2. Libros");
-            System.out.println("3. Cine");
-            System.out.println("4. Salir");
- 
-            try {
- 
-                System.out.println("Escribe una de las opciones");
-                opcion = sc.nextInt();
- 
-                switch (opcion) {
-                    case 1:
-                        System.out.println("Has seleccionado Juegos");
-                        sb.append("\nJuegos");
-                        break;
-                    case 2:
-                        System.out.println("Has seleccionado Libros");
-                        sb.append("\nLibros");
-                        break;
-                    case 3:
-                        System.out.println("Has seleccionado Cine");
-                        sb.append("\nCine");
-                        break;
-                    case 4:
-                        salir = true;
-                        break;
-                    default:
-                        System.out.println("Solo números entre 1 y 4");
-                   
-                        
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Debes insertar un número");
-                sc.next();
-            }
-        }
-        System.out.println(sb.toString());
-    }
-    
-    
-    
-    
-    
 }

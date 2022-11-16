@@ -10,68 +10,64 @@ package paquete.clases;
  *
  * @author wadia
  */
-public abstract class Cuenta 
-{
-    protected String usuario,pais,contrasena,publicacion;
-    protected int edad;
-    protected boolean verPubli,validPubli;
+public abstract class Cuenta {
+  protected String usuario, pais, contrasena, publicacion;
+  protected int edad;
+  protected boolean verPubli, validPubli;
 
-    public Cuenta() {
-    }
+  public Cuenta() {
+  }
 
-    public String getUsuario() {
-        return usuario;
-    }
+  public String getUsuario() {
+    return usuario;
+  }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
+  public void setUsuario(String usuario) {
+    this.usuario = usuario;
+  }
 
-    public String getPais() {
-        return pais;
-    }
+  public String getPais() {
+    return pais;
+  }
 
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
+  public void setPais(String pais) {
+    this.pais = pais;
+  }
 
-    public String getContrasena() {
-        return contrasena;
-    }
+  public String getContrasena() {
+    return contrasena;
+  }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
+  public void setContrasena(String contrasena) {
+    this.contrasena = contrasena;
+  }
 
-    public int getEdad() {
-        return edad;
-    }
+  public int getEdad() {
+    return edad;
+  }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
+  public void setEdad(int edad) {
+    this.edad = edad;
+  }
 
-    public boolean isVerPubli() {
-        return verPubli;
-    }
+  public boolean isVerPubli() {
+    return verPubli;
+  }
 
-    public void setVerPubli(boolean verPubli) {
-        this.verPubli = verPubli;
-    }
+  public void setVerPubli(boolean verPubli) {
+    this.verPubli = verPubli;
+  }
 
-    public boolean isValidPubli() {
-        return validPubli;
-    }
+  public boolean isValidPubli() {
+    return validPubli;
+  }
 
-    public void setValidPubli(boolean validPubli) {
-        this.validPubli = validPubli;
-    }
-    
-    
-    
-    
-    public abstract void CrearPubli();
-    public abstract void VerPubli();
-    
-    
+  public void setValidPubli(boolean validPubli) {
+    this.validPubli = validPubli;
+  }
+
+  public abstract String CrearPubli();
+
+  public abstract void VerPubli();
+
 }
