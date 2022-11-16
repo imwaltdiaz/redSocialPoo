@@ -11,12 +11,15 @@ package paquete.clases;
  * @author wadia
  */
 public abstract class Cuenta {
-  protected String usuario, pais, contrasena, publicacion;
+  protected String usuario, contrasena, publicacion;
   protected int edad;
   protected boolean verPubli, validPubli;
 
-  public Cuenta() {
-  }
+    public Cuenta(String usuario, String contrasena, int edad) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.edad = edad;
+    }
 
   public String getUsuario() {
     return usuario;
@@ -24,14 +27,6 @@ public abstract class Cuenta {
 
   public void setUsuario(String usuario) {
     this.usuario = usuario;
-  }
-
-  public String getPais() {
-    return pais;
-  }
-
-  public void setPais(String pais) {
-    this.pais = pais;
   }
 
   public String getContrasena() {
