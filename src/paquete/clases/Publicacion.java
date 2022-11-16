@@ -52,3 +52,6 @@ public class Publicacion {
     this.id = rand.nextInt(200-1+1)+1; 
   }
 }
+
+
+
