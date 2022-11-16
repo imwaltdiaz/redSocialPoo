@@ -15,11 +15,11 @@ public abstract class Cuenta {
   protected int edad;
   protected boolean verPubli, validPubli;
 
-    public Cuenta(String usuario, String contrasena, int edad) {
-        this.usuario = usuario;
-        this.contrasena = contrasena;
-        this.edad = edad;
-    }
+  public Cuenta(String usuario, String contrasena, int edad) {
+    this.usuario = usuario;
+    this.contrasena = contrasena;
+    this.edad = edad;
+  }
 
   public String getUsuario() {
     return usuario;

@@ -8,7 +8,6 @@ package paquete.clases;
  *
  * @author gabrielcuray
  */
-public interface Gusto 
-{    
+public interface Gusto {
   void MarcarGustos();
 }

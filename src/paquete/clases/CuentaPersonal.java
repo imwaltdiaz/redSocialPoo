@@ -14,9 +14,9 @@ import java.util.Scanner;
 public class CuentaPersonal extends Cuenta implements Gusto {
   private String Gustos;
 
-    public CuentaPersonal(String usuario, String contrasena, int edad) {
-        super(usuario, contrasena, edad);
-    }
+  public CuentaPersonal(String usuario, String contrasena, int edad) {
+    super(usuario, contrasena, edad);
+  }
 
   public String getGusto() {
     return Gustos;
@@ -46,7 +46,7 @@ public class CuentaPersonal extends Cuenta implements Gusto {
 
   @Override
   public void VerPubli() {
-    
+
   }
 
   @Override

@@ -10,11 +10,12 @@ import java.util.Scanner;
  *
  * @author gabrielcuray
  */
-public class CuentaEmpresarial extends Cuenta{
+public class CuentaEmpresarial extends Cuenta {
 
-    public CuentaEmpresarial(String usuario, String contrasena, int edad) {
-        super(usuario, contrasena, edad);
-    }
+  public CuentaEmpresarial(String usuario, String contrasena, int edad) {
+    super(usuario, contrasena, edad);
+  }
+
   public String CrearPubli() {
     String valid;
     Scanner sc = new Scanner(System.in);
@@ -33,6 +34,6 @@ public class CuentaEmpresarial extends Cuenta{
   }
 
   @Override
-  public void VerPubli() {    
+  public void VerPubli() {
   }
 }

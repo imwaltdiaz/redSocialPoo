@@ -8,8 +8,6 @@ public class Publicacion {
   private String descripcion;
   // private Boolean mayorEdad;
 
-
-
   public int getId() {
     return this.id;
   }
@@ -35,23 +33,19 @@ public class Publicacion {
   }
 
   // public Boolean isMayorEdad() {
-  //   return this.mayorEdad;
+  // return this.mayorEdad;
   // }
 
   // public Boolean getMayorEdad() {
-  //   return this.mayorEdad;
+  // return this.mayorEdad;
   // }
 
   // public void setMayorEdad(Boolean mayorEdad) {
-  //   this.mayorEdad = mayorEdad;
+  // this.mayorEdad = mayorEdad;
   // }
-  
 
-  public void AsignarId(){
+  public void AsignarId() {
     Random rand = new Random();
-    this.id = rand.nextInt(200-1+1)+1; 
+    this.id = rand.nextInt(200 - 1 + 1) + 1;
   }
 }
-
-
-

@@ -14,12 +14,10 @@ import java.util.Scanner;
 public class CuentaKids extends Cuenta implements Gusto {
   private int[] gusto;
 
-    public CuentaKids(String usuario, String contrasena, int edad) {
-        super(usuario, contrasena, edad);
-        gusto = new int[3];
-    }
-
- 
+  public CuentaKids(String usuario, String contrasena, int edad) {
+    super(usuario, contrasena, edad);
+    gusto = new int[3];
+  }
 
   public int[] getGusto() {
     return gusto;
