@@ -63,6 +63,5 @@ public abstract class Cuenta {
 
   public abstract String CrearPubli();
 
-  public abstract void VerPubli();
-
+  
 }

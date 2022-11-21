@@ -8,6 +8,10 @@ public class Publicacion {
   private String descripcion;
   // private Boolean mayorEdad;
 
+    public Publicacion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
   public int getId() {
     return this.id;
   }
@@ -48,4 +52,10 @@ public class Publicacion {
     Random rand = new Random();
     this.id = rand.nextInt(200 - 1 + 1) + 1;
   }
+
+    @Override
+    public String toString() {
+        return "Publicacion{" + "id=" + id + ", autor=" + autor + ", descripcion=" + descripcion + '}';
+    }
+  
 }

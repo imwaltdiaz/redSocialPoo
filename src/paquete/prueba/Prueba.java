@@ -21,9 +21,15 @@ public class Prueba {
 
     // Iniciamos objeto Gestion
     Gestion objG = new Gestion();
+    // Objeto de muestra
+
     CuentaPersonal objM = new CuentaPersonal("Alan", "Garcia", 40);
     objG.Ingresar(objM);
-
+    //Publicacion de muestra
+    Publicacion objP = new Publicacion("Esta es mi primera publicacion");
+    objG.IngresarPubli("Esta es mi primera publicacion", "Alan");
+    
+    
     // Opciones
     System.out.println("Opcion: ");
     Scanner sc = new Scanner(System.in);
@@ -47,15 +53,27 @@ public class Prueba {
 
       System.out.println("Ingrese contrasena: ");
       String contrasena = new Scanner(System.in).nextLine();
+      
       boolean val = objG.Validar(usuario, contrasena);
+      
       if (val) {
         System.out.println("Bienvenido " + usuario);
-        System.out.println("Que desea hacer?:\n\t1)Crear publicacion\n\t2)Ver publicacion");
+        System.out.println("Que desea hacer?:\n\t1)Crear publicacion\n\t2)Ver publicacion\n\t0)Salir");
         int actividad = new Scanner(System.in).nextInt();
-        if (actividad == 1) {
-
-        } else if (actividad == 2) {
-
+       
+        while(actividad != 0){
+          
+                if (actividad == 1) {
+               String texto = objM.CrearPubli();
+               System.out.println("Tu publicacion es: " + texto);
+               objG.IngresarPubli(texto, usuario);
+                System.out.println("Listo! ");
+                System.out.println("Que deseas hacer?\n1)Crear otra publicacion\n2)Ver Publicaciones\n0)Salir");
+                actividad = new Scanner(System.in).nextInt();
+            } else if (actividad == 2) {
+                objG.VerPubli();
+                actividad = 0;
+            }
         }
       } else {
         System.out.println("Usuario o contraseña incorrecta");
@@ -81,18 +99,38 @@ public class Prueba {
         if (tipoCuenta == 1) {
           CuentaPersonal obj1 = new CuentaPersonal(usuario, contrasena, edad);
           System.out.println("Hay que conocernos mejor!");
-          // obj1.MarcarGustos();
-        } else if (tipoCuenta == 2) {
-          System.out.println("Elegiste cuenta empresarial");
-        }
+          obj1.MarcarGustos();
+          System.out.println("Que desea hacer?:\n\t1)Crear publicacion\n\t2)Ver publicacion\n\t0)Salir");
+            int actividad = new Scanner(System.in).nextInt();
+
+            while(actividad != 0){
+
+                    if (actividad == 1) {
+                   String texto = objM.CrearPubli();
+                   System.out.println("Tu publicacion es: " + texto);
+                   objG.IngresarPubli(texto, usuario);
+                    System.out.println("Listo! ");
+                    System.out.println("Que deseas hacer?\n1)Crear otra publicacion\n2)Ver Publicaciones\n0)Salir");
+                    actividad = new Scanner(System.in).nextInt();
+                } else if (actividad == 2) {
+                    objG.VerPubli();
+                    System.out.println("Que deseas hacer?\n1)Crear otra publicacion\n2)Ver Publicaciones\n0)Salir");
+                    actividad = new Scanner(System.in).nextInt();
+                }
+            }
+
+            } else if (tipoCuenta == 2) {
+              System.out.println("Elegiste cuenta empresarial");
+            }
       }
       if (edad < 18) {
         System.out.println("Eres cuenta kids!");
         CuentaKids obj3 = new CuentaKids(usuario, contrasena, edad);
         // Ingresar gustos abajo
+        obj3.MarcarGustos();
+
       }
     }
-    // Objeto de muestra
-
+    
   }
 }

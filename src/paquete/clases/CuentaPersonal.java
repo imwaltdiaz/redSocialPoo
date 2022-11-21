@@ -12,18 +12,9 @@ import java.util.Scanner;
  * @author gabrielcuray
  */
 public class CuentaPersonal extends Cuenta implements Gusto {
-  private String Gustos;
 
   public CuentaPersonal(String usuario, String contrasena, int edad) {
     super(usuario, contrasena, edad);
-  }
-
-  public String getGusto() {
-    return Gustos;
-  }
-
-  public void setGusto(String Gusto) {
-    this.Gustos = Gusto;
   }
 
   @Override
@@ -44,71 +35,47 @@ public class CuentaPersonal extends Cuenta implements Gusto {
     return publicacion;
   }
 
-  @Override
-  public void VerPubli() {
-
-  }
 
   @Override
   public void MarcarGustos() {
     // Revisar esta función post-prueba...
-
-    System.out.print("Ingrese sus gustos"
-        + "\n1. Juegos"
-        + "\n2. Libros"
-        + "\n3. Cine");
-
-    for (int i = 0; i < 0; i++) {
-      Scanner sc = new Scanner(System.in);
-
-    }
-
     Scanner sc = new Scanner(System.in);
-    boolean salir = false;
-    int opcion;
-
-    // StringBuffer sb = new StringBuffer("Ha escogido");
-    StringBuilder sb;
-    sb = new StringBuilder("Ha escogido: ");
-
-    while (!salir) {
-
-      System.out.println("1. Juegos");
-      System.out.println("2. Libros");
-      System.out.println("3. Cine");
-      System.out.println("4. Salir");
-
-      try {
-
-        System.out.println("Escribe una de las opciones");
-        opcion = sc.nextInt();
-
-        switch (opcion) {
-          case 1:
-            System.out.println("Has seleccionado Juegos");
-            sb.append("\nJuegos");
-            break;
-          case 2:
-            System.out.println("Has seleccionado Libros");
-            sb.append("\nLibros");
-            break;
-          case 3:
-            System.out.println("Has seleccionado Cine");
-            sb.append("\nCine");
-            break;
-          case 4:
-            salir = true;
-            break;
-          default:
-            System.out.println("Solo números entre 1 y 4");
-
+        boolean salir = false;
+        int opcion;
+        
+        StringBuffer sb = new StringBuffer("Ha escogido: ");
+        
+        System.out.println("1. Juegos" +
+                           "\n2. Libros" +
+                           "\n3. Cine" +
+                           "\n4. Salir");
+        
+        for(int i=0;i<=2;i++)
+        {
+            System.out.println("Escoge al menos una opción");
+            opcion = sc.nextInt();
+            if (opcion==1)
+            {
+                System.out.println("Has seleccionado Juegos");
+                sb.append("\nJuegos");
+            }
+            else if(opcion==2)
+            {
+                System.out.println("Has seleccionado Libros");
+                sb.append("\nLibros");
+            }
+            else if(opcion==3)
+            {
+                System.out.println("Has seleccionado Cine");
+                sb.append("\nCine");
+            }
+            else if(opcion==4)
+            {
+                System.out.println(sb.toString());
+                break;
+            }
         }
-      } catch (InputMismatchException e) {
-        System.out.println("Debes insertar un número");
-        sc.next();
-      }
-    }
-    System.out.println(sb.toString());
-  }
 
+
+  }
 }
