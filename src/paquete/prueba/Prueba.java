@@ -16,7 +16,7 @@ import paquete.gestion.*;
 public class Prueba {
   public static void main(String[] args) {
     // Bienvenida
-    System.out.println("Hola!\nBienvenido a RealText, expresa tus ideas libremente\n");
+    System.out.println("Hola!\nBienvenido a RealTalk, expresa tus ideas libremente\n");
     System.out.println("Selecciona tu opción:\n\n1)Iniciar Sesión\n2)Crear cuenta");
 
     // Iniciamos objeto Gestion
